@@ -17,6 +17,7 @@ public class Employee {
 		employeeName = n;
 		employeeNumber = en;
 		hireDate = h;
+		// checking employeenumber
 		if(!isValidENumb(employeeNumber)){
 			throw new InvalidEmployeeNumber(employeeNumber);
 		}

@@ -18,17 +18,19 @@ public class ProductionWorker extends Employee {
 	public static final int NIGHT_SHIFT = 2;
 	private int shift;
 	private double payRate;
-	
+	// getting the Exception
 	public ProductionWorker(String n, String num, String date, int sh, double rate) throws InvalidShift,InvalidPayRate, InvalidEmployeeNumber
 	{
 		super(n, num, date);
 		shift = sh;
 		payRate = rate;
+		//shift can only be 1 or 2
 		if(shift!=2&&shift!=1){
 			throw new InvalidShift(shift);
 			
 			
 		}
+		//pay rate not -
 		if(payRate<0){
 			throw new InvalidPayRate(payRate);
 		}
